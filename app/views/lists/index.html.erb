@@ -1,13 +1,13 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://unsplash.com/photos/wMkaMXTJjlQ), height(300);">
+<div class="banner">
   <div class="container">
     <h1>The <strong>Ultimate Watch List</strong></h1>
-    <p>Keep track of all the movies you watched</p>
-    <a class="btn btn-flat"><%= link_to 'Create a movie list', new_list_path %></a>
+    <h2>Keep track of all the movies you watched</h2>
+    <a class="btn btn-ghost"><%= link_to 'Create a movie list', new_list_path %></a>
   </div>
 </div>
 
-<ul class="list-group">
-  <% @lists.each do |list| %>
-    <li class="list-group-item"><%= link_to list.name, list_path(list)%></li>
-  <% end %>
-</ul>
+<div class="cards">
+<% @lists.each do |list| %>
+  <div class="card-category" style="background-image: url(<%list.image%>)"><%= link_to list.name, list_path(list)%></div>
+<% end %>
+</div>

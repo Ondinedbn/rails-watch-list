@@ -1,4 +1,8 @@
 // Specific CSS for your home-page
-.banner {
-  background-color: aquamarine;
+a {
+  color: red;
+
+  &:hover {
+    color: black;
+  }
 }
