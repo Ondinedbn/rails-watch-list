@@ -1,10 +1,13 @@
-<div class='banner'>
-<h1>Watch List</h1>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/background.png);">
+  <div class="container">
+    <h1>The <strong>Ultimate Watch List</strong></h1>
+    <p>Keep track of all the movies you watched</p>
+    <a class="btn btn-flat"><%= link_to 'Create a movie list', new_list_path %></a>
+  </div>
 </div>
+
 <ul class="list-group">
   <% @lists.each do |list| %>
     <li class="list-group-item"><%= link_to list.name, list_path(list)%></li>
   <% end %>
 </ul>
-
-<%= link_to 'Create a movie list', new_list_path %>
