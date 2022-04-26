@@ -8,6 +8,6 @@
 
 <div class="cards">
 <% @lists.each do |list| %>
-  <div class="card-category" style="background-image: url(<%list.image%>)"><%= link_to list.name, list_path(list)%></div>
+  <div class="card-category" style="background-image: url('<%= cl_image_tag'favorites', height: 300, crop: :fill %>')"><%= link_to list.name, list_path(list)%></div>
 <% end %>
 </div>
